@@ -5,22 +5,23 @@
   <title>Sergio A. Sabat-Bonilla | Freshwater Resilience Ecology</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Sergio A. Sabat-Bonilla – freshwater ecologist using macroinvertebrate traits, biomass, and headwater-to-coast connectivity to understand how disturbed ecosystems retain and rebuild function." />
+        content="Sergio A. Sabat-Bonilla – freshwater ecologist using macroinvertebrate traits, biomass, ecological memory, and headwater-to-coast connectivity to understand how disturbed ecosystems retain and rebuild function." />
   <style>
     :root {
       --bg: #f6f7fb;
       --bg-alt: #ffffff;
       --accent: #145c72;
-      --accent-soft: #d5e9f0;
       --accent-alt: #0f766e;
+      --accent-soft: #d5e9f0;
       --text-main: #0f172a;
       --text-muted: #6b7280;
       --border-soft: #e5e7eb;
       --radius-xl: 18px;
-      --shadow-soft: 0 14px 36px rgba(15,23,42,0.10);
-      --max-width: 1080px;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      --transition-fast: 0.18s ease;
+      --shadow-soft: 0 14px 32px rgba(15,23,42,0.12);
+      --max-width: 1120px;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, -system-ui,
+        "SF Pro Text", "Segoe UI", sans-serif;
+      --transition-fast: 0.2s ease;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +29,7 @@
     body {
       font-family: var(--font-sans);
       background:
-        radial-gradient(circle at top left, #e0f2fe 0, #eff6ff 34%, var(--bg) 70%) fixed;
+        radial-gradient(circle at top left, #e0f2fe 0, #eff6ff 30%, var(--bg) 70%) fixed;
       color: var(--text-main);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -37,13 +38,14 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* NAV */
     header {
       position: sticky;
       top: 0;
       z-index: 40;
       backdrop-filter: blur(14px);
       background: rgba(246,247,251,0.96);
-      border-bottom: 1px solid rgba(229,231,235,0.85);
+      border-bottom: 1px solid rgba(229,231,235,0.9);
     }
 
     .nav {
@@ -67,7 +69,7 @@
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
+      gap: 0.65rem;
       font-size: 0.8rem;
       color: var(--text-muted);
     }
@@ -88,10 +90,10 @@
     main {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1.7rem 1.4rem 2.7rem;
+      padding: 1.7rem 1.4rem 2.8rem;
     }
 
-    section { margin-bottom: 3rem; }
+    section { margin-bottom: 3.1rem; }
 
     .section-label {
       font-size: 0.7rem;
@@ -103,7 +105,7 @@
     }
 
     .section-title {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
       color: var(--text-main);
@@ -112,7 +114,7 @@
     .section-text {
       font-size: 0.9rem;
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 800px;
       margin-bottom: 0.9rem;
     }
 
@@ -120,11 +122,11 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3.1fr) minmax(260px, 1.6fr);
-      gap: 1.75rem;
+      grid-template-columns: minmax(0, 3.1fr) minmax(260px, 1.7fr);
+      gap: 1.9rem;
       align-items: stretch;
-      padding: 1.9rem;
-      margin-top: 1rem;
+      padding: 2rem 1.8rem;
+      margin-top: 1.1rem;
       background: var(--bg-alt);
       border-radius: 26px;
       border: 1px solid rgba(209,213,219,0.9);
@@ -141,7 +143,7 @@
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.05rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
     }
@@ -149,7 +151,7 @@
     .hero-subtitle {
       font-size: 0.97rem;
       color: var(--text-muted);
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.7rem;
     }
 
     .hero-subtitle span {
@@ -160,13 +162,13 @@
     .hero-pillars {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 0.7rem;
+      gap: 0.35rem;
+      margin-bottom: 0.8rem;
     }
 
     .pill {
       font-size: 0.7rem;
-      padding: 0.24rem 0.65rem;
+      padding: 0.24rem 0.7rem;
       border-radius: 999px;
       background: var(--accent-soft);
       color: #0f172a;
@@ -183,7 +185,7 @@
     .btn-primary,
     .btn-ghost {
       font-size: 0.8rem;
-      padding: 0.42rem 0.9rem;
+      padding: 0.44rem 0.95rem;
       border-radius: 999px;
       border: 1px solid transparent;
       cursor: pointer;
@@ -218,7 +220,7 @@
 
     .hero-visual {
       position: relative;
-      padding: 0.9rem;
+      padding: 0.95rem;
       border-radius: 20px;
       background: radial-gradient(circle at top, #e0f2fe, #eff6ff);
       border: 1px solid rgba(209,213,219,0.95);
@@ -227,7 +229,7 @@
       color: var(--text-muted);
       display: flex;
       flex-direction: column;
-      gap: 0.45rem;
+      gap: 0.5rem;
     }
 
     .hero-visual h2 {
@@ -261,7 +263,7 @@
     }
 
     .hero-gradient-strip {
-      margin-top: 0.25rem;
+      margin-top: 0.18rem;
       display: grid;
       grid-template-columns: repeat(4,1fr);
       gap: 0.14rem;
@@ -308,19 +310,19 @@
       color: var(--text-muted);
     }
 
-    /* PILLARS */
+    /* PILLARS / PROGRAM */
 
     .pillars {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0,1fr));
-      gap: 0.6rem;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 0.7rem;
       margin-bottom: 1.1rem;
     }
 
     .pillar-card {
       background: var(--bg-alt);
       border-radius: var(--radius-xl);
-      padding: 0.6rem 0.6rem 0.65rem;
+      padding: 0.65rem 0.65rem 0.7rem;
       border: 1px solid var(--border-soft);
       font-size: 0.78rem;
       box-shadow: 0 4px 14px rgba(15,23,42,0.04);
@@ -335,16 +337,16 @@
       letter-spacing: 0.06em;
     }
 
-    /* CARDS */
+    /* PROJECT CARDS */
 
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 0.75rem;
+      gap: 0.8rem;
     }
 
     .card {
-      padding: 0.65rem 0.6rem 0.7rem;
+      padding: 0.65rem 0.6rem 0.75rem;
       border-radius: var(--radius-xl);
       background: var(--bg-alt);
       border: 1px solid var(--border-soft);
@@ -380,13 +382,54 @@
       color: var(--text-muted);
     }
 
+    /* IMAGE STRIP */
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .image-tile {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(209,213,219,0.9);
+      background: #e5e7eb;
+      min-height: 80px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.18rem 0.3rem;
+    }
+
+    .image-tile img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .image-caption {
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(2px);
+      background: rgba(249,250,251,0.75);
+      border-radius: 999px;
+      padding: 0.06rem 0.35rem;
+    }
+
     /* TIMELINE */
 
     .timeline {
       border-left: 2px solid var(--accent-soft);
       padding-left: 0.8rem;
       display: grid;
-      gap: 0.45rem;
+      gap: 0.5rem;
       font-size: 0.8rem;
     }
 
@@ -421,7 +464,7 @@
     .two-col {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 0.5rem 1.1rem;
+      gap: 0.55rem 1.2rem;
       font-size: 0.78rem;
       color: var(--text-muted);
       margin-top: 0.3rem;
@@ -435,45 +478,10 @@
       margin-right: 0.1rem;
     }
 
-    /* IMAGE STRIP */
-
-    .image-strip {
-      display: grid;
-      grid-template-columns: repeat(4,minmax(0,1fr));
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-      font-size: 0.65rem;
-      color: var(--text-muted);
-    }
-
-    .image-tile {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(209,213,219,0.9);
-      background: #e5e7eb;
-      display: flex;
-      align-items: flex-end;
-      padding: 0.16rem 0.26rem;
-      min-height: 70px;
-    }
-
-    .image-tile img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .image-caption {
-      position: relative;
-      z-index: 2;
-      mix-blend-mode: multiply;
-    }
-
     /* CONTACT */
 
     .contact-block {
-      padding: 0.75rem 0.9rem;
+      padding: 0.8rem 0.95rem;
       border-radius: var(--radius-xl);
       background: var(--bg-alt);
       border: 1px solid var(--border-soft);
@@ -499,7 +507,9 @@
       letter-spacing: 0.08em;
     }
 
-    @media (max-width: 880px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .pillars { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .cards-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -507,11 +517,17 @@
     }
 
     @media (max-width: 640px) {
-      .nav { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
       main { padding: 1.2rem; }
       .pillars,
       .cards-grid,
-      .image-strip { grid-template-columns: 1fr; }
+      .image-strip {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -520,12 +536,13 @@
   <div class="nav">
     <div class="nav-title">Sergio A. Sabat-Bonilla</div>
     <nav class="nav-links">
+      <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
       <a href="#trajectory">Future</a>
       <a href="#teaching">Teaching</a>
       <a href="#outreach">Outreach</a>
-      <a href="#publications">Publications</a>
+      <a href="#publications">Outputs</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -533,48 +550,48 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="about">
     <div>
-      <div class="hero-kicker">Streams under pressure · Functional pathways of resilience</div>
+      <div class="hero-kicker">Freshwater resilience · Traits · Headwaters to coasts</div>
       <h1>Sergio A. Sabat-Bonilla</h1>
       <div class="hero-subtitle">
-        Freshwater ecologist using macroinvertebrate traits, biomass, ecological memory
-        and headwater-to-coast connectivity to ask a simple, hard question:
-        <span>when landscapes change and we try to fix them, do rivers actually recover?</span>
+        Freshwater ecologist studying how streams and rivers <span>retain, lose, and rebuild</span>
+        function under disturbance. I use macroinvertebrate traits, biomass, ecological memory,
+        and headwater-to-coast connectivity to turn community change into decision-ready indicators
+        for conservation and restoration.
       </div>
       <div class="hero-pillars">
-        <div class="pill">Functional traits &amp; biomass</div>
+        <div class="pill">Functional pathways of resilience</div>
+        <div class="pill">Trait- &amp; biomass-based indicators</div>
         <div class="pill">Disturbance &amp; restoration gradients</div>
-        <div class="pill">Ecological memory &amp; thresholds</div>
-        <div class="pill">Headwaters → coasts</div>
-        <div class="pill">Reproducible, open workflows</div>
-        <div class="pill">Bilingual &amp; inclusive mentorship</div>
+        <div class="pill">Headwaters → estuaries</div>
+        <div class="pill">Open &amp; reproducible workflows</div>
+        <div class="pill">Bilingual, inclusive mentorship</div>
       </div>
       <div class="hero-cta">
-        <a href="#projects" class="btn-primary">See the work →</a>
+        <a href="#research" class="btn-primary">Explore the research →</a>
+        <a href="#projects" class="btn-ghost">See current projects</a>
         <a href="#trajectory" class="btn-ghost">Future lab vision</a>
-        <a href="#contact" class="btn-ghost">CV &amp; contact</a>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <h2>Research snapshot</h2>
+    <aside class="hero-visual" aria-label="Snapshot of Sergio's research">
+      <h2>At a glance</h2>
       <div class="mini-line">
-        <span class="mini-label">Core lens</span>
-        <span>Macroinvertebrates as sensors of energy flow, resilience &amp; recovery.</span>
+        <span class="mini-label">Questions</span>
+        <span>How do biological legacies, traits, and connectivity govern recovery pathways?</span>
       </div>
       <div class="mini-line">
-        <span class="mini-label">Approach</span>
+        <span class="mini-label">Toolbox</span>
         <span class="mini-tag">Traits × biomass × production</span>
         <span class="mini-tag">Gradient &amp; breakpoint models</span>
-        <span class="mini-tag">Meta-analysis + field</span>
+        <span class="mini-tag">Meta-analysis + field networks</span>
       </div>
       <div class="mini-line">
-        <span class="mini-label">Scope</span>
-        <span>From experimental wetlands &amp; working landscapes to regional networks
-              and continental datasets.</span>
+        <span class="mini-label">Modes</span>
+        <span>Field campaigns · long-term datasets · open code · partner-driven questions</span>
       </div>
-      <div class="hero-gradient-strip">
+      <div class="hero-gradient-strip" aria-hidden="true">
         <span>Forested headwaters</span>
         <span>Agricultural &amp; urban streams</span>
         <span>Restoration corridors</span>
@@ -582,137 +599,134 @@
       </div>
       <div class="hero-photo-wrap">
         <div class="hero-photo">
-          <img src="img/sergio_profile.jpg" alt="Sergio in the field holding a crayfish" />
+          <img src="img/sergio_profile.jpg"
+               alt="Sergio A. Sabat-Bonilla holding a crayfish during field sampling"
+               onerror="this.style.display='none'"/>
         </div>
         <div class="hero-photo-text">
-          Field-based, trait-based, people-centered science —
-          integrating boots-in-streams work with open data and collaborative networks.
+          Field-based, quantitatively fluent, people-centered science —
+          using bugs, gradients, and collaboration to read how rivers respond to change.
         </div>
       </div>
-    </div>
+    </aside>
   </section>
 
   <!-- RESEARCH IDENTITY -->
   <section id="research">
-    <div class="section-label">Research identity</div>
-    <h2 class="section-title">Reading resilience through functional pathways</h2>
+    <div class="section-label">Research program</div>
+    <h2 class="section-title">Functional pathways of resilience in freshwater ecosystems</h2>
     <p class="section-text">
-      My work sits at the interface of community ecology, ecosystem function, and applied management.
-      I treat macroinvertebrates not as a checklist, but as living recorders of disturbance, recovery,
-      and connection. By combining structural metrics (who is there) with functional indicators
-      (what work they are doing) and trait-based frameworks, I map how ecosystems retain or rebuild
-      function under stress — and where that capacity is eroding.
+      My research traces how freshwater ecosystems absorb disturbance, reorganize, or tip into new
+      states. I integrate community and ecosystem ecology to link who is present, what they do,
+      and how energy and materials move from headwaters to coasts. Across projects, three pillars
+      structure this program.
     </p>
     <div class="pillars">
       <div class="pillar-card">
-        <div class="pillar-label">Functional indicators</div>
-        Building biomass- and trait-based metrics that translate community change into
-        process-level signals of ecosystem performance and resilience.
+        <div class="pillar-label">1. Functional indicators</div>
+        Developing trait-, biomass-, and production-based metrics that translate macroinvertebrate
+        communities into mechanistic signals of ecosystem performance, sensitivity, and recovery.
       </div>
       <div class="pillar-card">
-        <div class="pillar-label">Disturbance gradients</div>
-        Using continuous land-use, hydrologic, and restoration gradients to detect breakpoints,
-        nonlinear responses, and resilience debts missed by pass/fail indices.
+        <div class="pillar-label">2. Ecological memory</div>
+        Quantifying biological legacies, redundancy, and connectivity that store “recovery plans”
+        in organisms, habitats, and landscapes — and diagnosing when memory is eroding.
       </div>
       <div class="pillar-card">
-        <div class="pillar-label">Ecological memory</div>
-        Quantifying biological legacies, redundancy, and connectivity that encode recovery
-        potential — the “memory” that lets streams reorganize after disturbance.
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-label">Headwater-to-coast linkages</div>
-        Tracking how local trait composition and ecosystem function propagate downstream,
-        connecting upland decisions to estuarine and coastal outcomes.
+        <div class="pillar-label">3. Headwater–coast connectivity</div>
+        Testing how local functional structure and management decisions propagate downstream to
+        influence river networks, estuaries, and coastal resilience.
       </div>
     </div>
-  </section>
 
-  <!-- RESEARCH IMAGES STRIP -->
-  <section>
-    <div class="section-label">Research in pictures</div>
-    <h2 class="section-title">Systems, scales &amp; people I work with</h2>
     <p class="section-text">
-      A visual shorthand for my science: headwaters, working lands, restoration sites,
-      estuaries — and the students and partners who make the work possible.
-      Replace these tiles with your own images in <code>/img</code> when ready.
+      This framework has grown from comparative work in forests, wetlands, coastal systems, and
+      river networks, and now anchors a trajectory toward an open, collaborative freshwater
+      resilience lab connecting federal agencies, NGOs, tribal nations, and universities across
+      regions.
     </p>
+
+    <div class="section-label" style="margin-top:0.6rem;">Research in pictures</div>
     <div class="image-strip">
       <div class="image-tile">
-        <!-- Example: <img src="img/riffle_macro.jpg" alt="Riffle with macroinvertebrate sampling" /> -->
+        <img src="img/riffle_macro.jpg" alt="Headwater riffle with macroinvertebrate sampling tray" onerror="this.style.display='none'"/>
         <div class="image-caption">Headwater riffles &amp; refugia</div>
       </div>
       <div class="image-tile">
-        <!-- Example: <img src="img/stream_watershed.jpg" alt="Agricultural watershed landscape" /> -->
+        <img src="img/working_landscape.jpg" alt="Working landscape with stream, vegetation, and powerline corridor" onerror="this.style.display='none'"/>
         <div class="image-caption">Working landscapes &amp; BMP mosaics</div>
       </div>
       <div class="image-tile">
-        <!-- Example: <img src="img/team_field.jpg" alt="Field crew sampling a stream" /> -->
+        <img src="img/team_field.jpg" alt="Field team sampling a stream channel" onerror="this.style.display='none'"/>
         <div class="image-caption">Collaborative field campaigns</div>
       </div>
       <div class="image-tile">
-        <!-- Example: <img src="img/lab_traits.jpg" alt="Lab and code-based trait analysis" /> -->
+        <img src="img/lab_traits.jpg" alt="Computer workstation showing trait data and analysis" onerror="this.style.display='none'"/>
         <div class="image-caption">Open, trait-based analytics</div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS / CONSTELLATION -->
   <section id="projects">
-    <div class="section-label">Current work</div>
-    <h2 class="section-title">Projects shaping this program</h2>
+    <div class="section-label">Project constellation</div>
+    <h2 class="section-title">Past, present &amp; emerging work (as one arc)</h2>
     <p class="section-text">
-      Together, these efforts form a single arc: diagnose how disturbance reshapes function,
-      test whether functional indicators outperform legacy metrics, and turn that knowledge
-      into tools co-designed with agencies, NGOs, and communities.
+      Each project is a node in a single storyline: diagnosing how disturbance reshapes function,
+      testing whether functional indicators outperform legacy metrics, and scaling that knowledge
+      into tools and collaborations that guide restoration.
     </p>
     <div class="cards-grid">
       <div class="card">
-        <div class="card-label">Synthesis</div>
-        <div class="card-title">Do conservation practices deliver biological recovery?</div>
+        <div class="card-label">Foundations · Terrestrial &amp; coastal</div>
+        <div class="card-title">Legacies and alternative states</div>
         <div class="card-meta">
-          Systematic synthesis of stream macroinvertebrate responses to management practices
-          across regions and land-use contexts, highlighting when responses are weak,
-          lagged, or contingent on functional metrics.
+          Early work on invasive earthworms, forest pests, wetlands, and shorebirds showed how
+          legacy land use restructures communities and functional trait space — seeding my focus
+          on disturbance histories and ecological memory.
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Gradient fieldwork</div>
-        <div class="card-title">Functional vs structural indicators along land-use gradients</div>
+        <div class="card-label">Current · Regional synthesis</div>
+        <div class="card-title">Do management practices deliver resilience?</div>
         <div class="card-meta">
-          Multi-region survey of 90+ streams testing trait-weighted biomass and production
-          against standard indices to detect stress, refuge, and recovery trajectories.
+          Lead-author synthesis of stream macroinvertebrate responses to conservation and
+          restoration practices across multiple regions, asking when and where functional
+          metrics reveal benefits obscured by traditional indices.
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Traits &amp; plasticity</div>
-        <div class="card-title">How portable are trait-based tools?</div>
+        <div class="card-label">Current · Gradient ecology</div>
+        <div class="card-title">Functional vs structural change along land-use gradients</div>
         <div class="card-meta">
-          Evaluating trait plasticity, fuzzy coding, and regional species pools
-          to understand when functional indicators transfer, and when they mislead.
+          Multi-province fieldwork and long-term datasets testing trait-weighted biomass
+          and production as early-warning indicators across agricultural and mixed-use
+          catchments.
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Open workflows</div>
-        <div class="card-title">Reproducible macroinvertebrate assessment</div>
+        <div class="card-label">Current · Big-data collaboration</div>
+        <div class="card-title">Continental trait &amp; flow relationships</div>
         <div class="card-meta">
-          Curated, analysis-ready datasets and scripts for macroinvertebrate metrics,
-          trait CWMs, and breakpoint models, designed for adoption by monitoring programs.
+          Collaborative use of national monitoring and observatory data to link hydrologic
+          variability, functional diversity, and resilience signatures at large scales.
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Citizen &amp; community science</div>
-        <div class="card-title">Salt, flow, and connectivity</div>
+        <div class="card-label">Current · Open science</div>
+        <div class="card-title">Reproducible macroinvertebrate workflows</div>
         <div class="card-meta">
-          Bilingual outreach and monitoring efforts that connect chloride, habitat change,
-          and macroinvertebrate indicators to lived water issues.
+          Peer-reviewed data releases and analysis pipelines that make trait-based
+          bioassessment and resilience diagnostics transparent and reusable for partners.
         </div>
       </div>
       <div class="card">
-        <div class="card-label">Comparative networks</div>
-        <div class="card-title">From temperate rivers to tropical catchments</div>
+        <div class="card-label">Emerging · Headwaters → coasts</div>
+        <div class="card-title">Functional linkages across the freshwater continuum</div>
         <div class="card-meta">
-          Collaborative projects extending functional resilience frameworks across climates,
-          testing which pathways are universal and which are place-dependent.
+          Designing comparative projects that connect upland interventions, riverine
+          communities, and coastal processes to evaluate how local decisions scale
+          downstream.
         </div>
       </div>
     </div>
@@ -721,28 +735,31 @@
   <!-- FUTURE TRAJECTORY -->
   <section id="trajectory">
     <div class="section-label">Future trajectory</div>
-    <h2 class="section-title">Building a freshwater resilience lab</h2>
+    <h2 class="section-title">Toward an open, bilingual freshwater resilience lab</h2>
     <p class="section-text">
-      The long-term goal is a lab that reads rivers as dynamic, memory-rich systems and
-      trains students to turn that understanding into restoration and policy tools.
+      The next decade of my work is organized around building a lab that treats restoration
+      as an experiment in rebuilding resilience — and trains students and partners to read
+      those experiments in real time.
     </p>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-label">Now</div>
-        Finalize synthesis and gradient studies; publish open datasets and code that
-        embed functional indicators in accessible workflows.
+        Consolidate synthesis and gradient projects; publish trait- and biomass-based
+        indicators; expand open datasets and scripts that agencies and NGOs can adopt
+        without steep technical barriers.
       </div>
       <div class="timeline-item">
-        <div class="timeline-label">Next 3–5 years</div>
-        Launch comparative projects at wetland–stream interfaces, stormwater networks,
-        agricultural mosaics and estuarine gateways to map functional pathways of recovery
-        and ecological memory.
+        <div class="timeline-label">3–5 years</div>
+        Launch comparative field experiments at wetland–stream interfaces, stormwater
+        networks, agricultural mosaics and estuarine transitions; explicitly test ecological
+        memory, functional redundancy, and alternative pathways of recovery.
       </div>
       <div class="timeline-item">
         <div class="timeline-label">Beyond</div>
-        Grow an open, bilingual research group that connects agencies, NGOs, and communities
-        across regions—from headwaters to coasts and temperate to tropical systems—
-        around trait-based indicators of resilience and restoration success.
+        Grow a collaborative, bilingual research group working across temperate and tropical
+        systems; connect partners and students through shared trait databases, code, and
+        co-designed monitoring frameworks that evaluate restoration outcomes through
+        functional pathways of resilience.
       </div>
     </div>
   </section>
@@ -750,72 +767,75 @@
   <!-- TEACHING -->
   <section id="teaching">
     <div class="section-label">Teaching &amp; mentoring</div>
-    <h2 class="section-title">Translating complexity into tools students can use</h2>
+    <h2 class="section-title">Helping students read rivers and data with confidence</h2>
     <p class="section-text">
-      My teaching is an extension of my science: experiential, quantitative, and grounded in care.
-      I design spaces where students see real data, real organisms, and real decisions —
-      and see themselves as capable of shaping all three.
+      My teaching translates complexity into usable understanding. I design bilingual,
+      field- and data-rich experiences where students move from curiosity to code to
+      communication, and where inclusion is built into the structure, not bolted on.
     </p>
     <div class="two-col">
       <ul>
-        <li>Bilingual Freshwater Biomonitoring courses linking field sampling, R-based analysis,
-            and cross-cultural collaboration.</li>
-        <li>Aquatic entomology &amp; biomonitoring labs focused on rigorous ID,
-            QA/QC, and trait-based thinking.</li>
-        <li>Quantitative ecology modules: gradients, GLMMs, ordinations, breakpoints,
-            and visualization using open workflows.</li>
+        <li>Courses and modules in freshwater biomonitoring, aquatic entomology,
+            disturbance ecology, and quantitative ecology using authentic datasets.</li>
+        <li>Scaffolded, inquiry-based projects that carry students from sampling design
+            to trait-based analysis, visualization, and policy-relevant storytelling.</li>
+        <li>Emphasis on open tools (R/Python, Git-based workflows) and transparent
+            expectations to demystify quantitative work.</li>
       </ul>
       <ul>
-        <li>Mentorship centered on first-gen, international, and historically excluded scientists,
-            emphasizing confidence with quantitative tools.</li>
-        <li>Assignments that move from observation to explanation to communication:
-            turning code and figures into narratives for managers and communities.</li>
+        <li>Mentorship shaped by first-gen and multilingual experience: centering
+            belonging, confidence with methods, and pathways into research careers.</li>
+        <li>Collaborative, cross-cultural teaching (English/Spanish) that frames
+            freshwater science within broader social and environmental justice contexts.</li>
       </ul>
     </div>
   </section>
 
-  <!-- OUTREACH -->
+  <!-- OUTREACH & COLLABORATIONS -->
   <section id="outreach">
-    <div class="section-label">Outreach &amp; service</div>
-    <h2 class="section-title">Science with communities, not just about them</h2>
+    <div class="section-label">Outreach, service &amp; collaborations</div>
+    <h2 class="section-title">Science with communities and partners</h2>
     <p class="section-text">
-      I stay active in professional societies and outreach efforts that align freshwater science
-      with equity, accessibility, and on-the-ground decision-making.
+      My work depends on and contributes to networks of practitioners, agencies, labs, and
+      community groups. I see every collaboration as both research and training infrastructure.
     </p>
     <div class="two-col">
       <ul>
-        <li>Mentor and organizer in programs supporting emerging freshwater scientists,
-            including Spanish-language spaces.</li>
-        <li>Community events and citizen-science projects that use macroinvertebrates
-            to tell stories about watershed health.</li>
+        <li>Mentor for programs supporting emerging freshwater scientists, including
+            underrepresented and international students.</li>
+        <li>Engagement in community science events and stream-focused outreach that use
+            macroinvertebrates to decode watershed health.</li>
       </ul>
       <ul>
-        <li>Development of bilingual guides and open materials that demystify indices,
-            traits, and resilience for practitioners and students.</li>
-        <li>Service roles that bridge academic research with restoration planning
-            and environmental justice conversations.</li>
+        <li>Co-development of bilingual guides and workshops on trait-based indicators,
+            ecological memory, and restoration monitoring.</li>
+        <li>Partnerships with federal, state, and non-profit groups to align functional
+            metrics with restoration goals and environmental policy.</li>
       </ul>
     </div>
   </section>
 
-  <!-- PUBLICATIONS -->
+  <!-- OUTPUTS -->
   <section id="publications">
     <div class="section-label">Selected outputs</div>
-    <h2 class="section-title">Publications, data &amp; talks</h2>
+    <h2 class="section-title">Publications, data releases &amp; talks</h2>
     <p class="section-text">
-      A sample illustrating the range from disturbance ecology and functional indicators
-      to data releases and applied frameworks. Update this as manuscripts progress.
+      A snapshot; see my CV or profiles for a complete and current list.
     </p>
     <ul style="font-size:0.78rem; color:var(--text-muted); margin-top:0.3rem;">
-      <li><strong>Lead author:</strong> Macroinvertebrate responses to management practices
-          across regions and metrics (review &amp; meta-analysis; in revision).</li>
-      <li><strong>Lead author:</strong> USGS-backed macroinvertebrate community data releases
-          spanning agricultural and mixed-land-use streams.</li>
+      <li><strong>Lead author:</strong> Stream macroinvertebrate responses to management
+          practices across regions and metrics (submitted).</li>
       <li><strong>Co-author:</strong> Riparian–stream connections and disturbance impacts
-          on temperate forested systems.</li>
-      <li>Multiple conference talks and posters on functional indicators, resilience,
-          and gradient-based assessment across national and international venues.</li>
+          on temperate forest systems (published).</li>
+      <li><strong>Data releases:</strong> Multi-year macroinvertebrate community and trait
+          datasets from agricultural and mixed-use catchments to support open synthesis.</li>
+      <li><strong>Talks &amp; posters:</strong> Invited and contributed presentations on
+          functional indicators, ecological memory, and holistic waterway assessment at
+          national and international meetings.</li>
     </ul>
+    <p class="section-text">
+      For full details, download my CV below or visit my Google Scholar / ORCID once linked.
+    </p>
   </section>
 
   <!-- CONTACT -->
@@ -826,8 +846,8 @@
       <div class="contact-info">
         <div class="contact-label">Reach out</div>
         <p>Email: <a href="mailto:ssabatbonilla@vt.edu">ssabatbonilla@vt.edu</a></p>
-        <p>Also: <a href="mailto:sergio.sabat@gmail.com">sergio.sabat@gmail.com</a></p>
-        <p>Based between field sites &amp; freshwater labs; open to collaborations.</p>
+        <p>Alt: <a href="mailto:sergio.sabat@gmail.com">sergio.sabat@gmail.com</a></p>
+        <p>Open to collaborations across regions, systems, and disciplines.</p>
       </div>
       <div class="contact-info">
         <div class="contact-label">Find the work</div>
@@ -839,13 +859,11 @@
           <a href="https://github.com/Ssabatbonilla" target="_blank">GitHub</a>
         </p>
         <p>
-          I welcome connections that link field ecology, open data,
-          and management across headwaters-to-coast systems.
+          I welcome emails from prospective students, collaborators, agencies, and community partners.
         </p>
       </div>
     </div>
   </section>
-
 </main>
 </body>
 </html>
